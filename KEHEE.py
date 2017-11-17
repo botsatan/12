@@ -92,7 +92,7 @@ wait = {
     "wblack":False,
     "dblack":False,
     "clock":True,
-    "cName":"Chivas ",
+    "cName":"ZzZzZz EXTREMISTS - SATAN ZzZzZz ",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
