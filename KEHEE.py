@@ -114,41 +114,6 @@ wait = {
     "atjointicket":True
     }
 
-            elif msg.text in ["Jam on"]:
-                if wait["clock"] == True:
-                    cl.sendText(msg.to,"already on")
-                else:
-                    wait["clock"] = True
-                    now2 = datetime.now()
-                    nowT = datetime.strftime(now2,"(%H:%M)")
-                    profile = cl.getProfile()
-                    profile.displayName = wait["cName"] + nowT
-                    cl.updateProfile(profile)
-                    cl.sendText(msg.to,"done")
-            elif msg.text in ["Jam off"]:
-                if wait["clock"] == False:
-                    cl.sendText(msg.to,"already off")
-                else:
-                    wait["clock"] = False
-                    cl.sendText(msg.to,"done")
-            elif msg.text in ["Change clock "]:
-                n = msg.text.replace("Change clock ","")
-                if len(n.decode("utf-8")) > 13:
-                    cl.sendText(msg.to,"changed")
-                else:
-                    wait["cName"] = n
-                    cl.sendText(msg.to,"changed to\n\n" + n)
-            elif msg.text in ["Up"]:
-                if wait["clock"] == True:
-                    now2 = datetime.now()
-                    nowT = datetime.strftime(now2,"(%H:%M)")
-                    profile = cl.getProfile()
-                    profile.displayName = wait["cName"] + nowT
-                    cl.updateProfile(profile)
-                    cl.sendText(msg.to,"Jam Update")
-                else:
-                    cl.sendText(msg.to,"Please turn on the name clock")
-
 
 def a2():
     now2 = datetime.now()
